@@ -1,0 +1,83 @@
+.body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    background-color: #5b9bd5;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.logo > img {
+    width: 160px;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+a {
+    text-decoration: none;
+    color:rgb(0, 0, 0)
+}
+
+.menue {
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom:  auto;
+    font-size: 22px;
+}
+
+li {
+    margin-left: 20px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.hero {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.para {
+    font-size: 22px;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: justify;
+}
+
+.footer {
+    display: flex;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    background-color: #5b9bd5;
+    border: 1px solid black;
+    color: rgb(10, 10, 10);
+    border-radius: 15px 15px 15px 15px;
+    margin-top: 35px;
+}
+
+.about-img{
+    float: right;
+}
+
+.hos > li{
+    display: list-item;
+    margin-left: 0 !important;
+    text-align:left;
+}
+
+.port-img{
+    float: left;
+    margin-right: 25px;
+}
+
+.port{
+display: grid
+;}

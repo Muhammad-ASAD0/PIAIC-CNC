@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Collect user's name using prompt
+      var name = prompt("What is your name?");
+
+      // Collect user's date of birth using prompt
+      var dobDay = parseInt(prompt("What day were you born?"));
+      var dobMonth = parseInt(prompt("What month were you born?"));
+      var dobYear = parseInt(prompt("What year were you born?"));
+
+      // Calculate age in years, months, days, hours, minutes, and seconds
+      var now = new Date();
+      var birthdate = new Date(dobYear, dobMonth - 1, dobDay);
+      var ageInSeconds = (now.getTime() - birthdate.getTime()) / 1000;
+      var ageInYears = Math.floor(ageInSeconds / 31536000);
+      var ageInMonths = Math.floor((ageInSeconds % 31536000) / 2629746);
+      var ageInDays = Math.floor((ageInSeconds % 2629746) / 86400);
+      var ageInHours = Math.floor((ageInSeconds % 86400) / 3600);
+      var ageInMinutes = Math.floor((ageInSeconds % 3600) / 60);
+      var ageInSecondsRemaining = Math.floor(ageInSeconds % 60);
+
+      // Calculate time remaining until next birthday
+      var nextBirthday = new Date(now.getFullYear(), dobMonth - 1, dobDay);
+      if (nextBirthday < now) {
+        nextBirthday.setFullYear(nextBirthday.getFullYear() + 1);
+      }
+      var timeUntilNextBirthdayInSeconds =
+        (nextBirthday.getTime() - now.getTime()) / 1000;
+      var timeUntilNextBirthdayInDays = Math.floor(
+        timeUntilNextBirthdayInSeconds / 86400
+      );
+      var timeUntilNextBirthdayInHours = Math.floor(
+        (timeUntilNextBirthdayInSeconds % 86400) / 3600
+      );
+      var timeUntilNextBirthdayInMinutes = Math.floor(
+        (timeUntilNextBirthdayInSeconds % 3600) / 60
+      );
+      var timeUntilNextBirthdayInSecondsRemaining = Math.floor(
+        timeUntilNextBirthdayInSeconds % 60
+      );
+
+      // Greet the user based on the current time of day
+      var timeOfDay = now.getHours();
+      var greeting;
+      if (timeOfDay < 12) {
+        greeting = "Good Morning";
+      } else if (timeOfDay < 18) {
+        greeting = "Good Afternoon";
+      } else {
+        greeting = "Good Evening";
+      }
+      var message = "Hello " + name + ", " + greeting + "!";
+
+      // Print the results to the console
+      console.log(message);
+      console.log(
+        "Your DOB is " +
+          birthdate.toLocaleString("en-PK", { timeZone: "Asia/Karachi" })
+      );
+      console.log(
+        "You are " +
+          ageInYears +
+          " years " +
+          ageInMonths +
+          " months " +
+          ageInDays +
+          " days " +
+          ageInHours +
+          " hours " +
+          ageInMinutes +
+          " minutes " +
+          ageInSecondsRemaining +
+          " seconds old"
+      );
+      console.log(
+        "Your age in days is " +
+          (ageInYears * 365 + ageInMonths * 30 + ageInDays)
+      );
+      if (timeUntilNextBirthdayInSeconds === 0) {
+        console.log(
+          "Happy Birthday " +
+            name +
+            "! Today is your " +
+            (ageInYears + 1) +
+            "th birthday."
+        );
+      } else {
+        console.log(
+          "How much time left in your next birthday? " +
+            timeUntilNextBirthdayInDays +
+            " days " +
+            timeUntilNextBirthdayInHours +
+            " hours " +
+            timeUntilNextBirthdayInMinutes +
+            " minutes " +
+            timeUntilNextBirthdayInSecondsRemaining +
+            " seconds"
+        );
+      }
+    </script>
+  </body>
+</html>

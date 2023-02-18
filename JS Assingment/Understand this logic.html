@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var value = multiply(4, 3, 6);
+
+      console.log("value", value); // The result is ?
+
+      function add(a, b) {
+        var z = a + b;
+        return z;
+      }
+
+      function multiply(a, b, c) {
+        var z = a * add(b, c);
+        return z;
+      }
+
+      console.log("course", course); // The result is ? console.log("z", z); // The result is ?
+
+      var course = "cloud native computing";
+
+      /*
+    The code starts by defining a variable called value and assigns the result of calling the multiply function with the arguments 4, 3, and 6 to it.
+
+    The multiply function takes three arguments, multiplies the first argument (a) with the result of calling the add function with the second and third arguments (b and c), and returns the result.
+
+    The add function takes two arguments, adds them together and returns the result.
+
+    Therefore, when multiply is called with 4, 3, and 6, it first calls add with 3 and 6, which returns 9. It then multiplies 4 with 9, which results in 36. This value is assigned to value.
+
+    Next, the code tries to log two more values to the console - course and z.
+
+    However, before this can happen, the code will throw a ReferenceError when trying to log course because it is being referenced before it is defined.
+
+    The reason for this is that course is defined after the console.log statement that is trying to log its value.
+
+    Similarly, the code will also throw a ReferenceError when trying to log z because z is defined within the add function's scope, and is not accessible outside of that function.
+
+    Therefore, the only output that will be logged to the console is the value of value, which is 36.
+     */
+    </script>
+  </body>
+</html>

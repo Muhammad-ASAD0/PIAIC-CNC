@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let userInput = prompt("Please enter a number with a decimal point:");
+      let roundedNumber = Math.ceil(userInput);
+      console.log("Rounded number:", roundedNumber);
+
+      let text = "This is my dummy text";
+      let slicedText = text.slice(0, roundedNumber);
+      console.log("Sliced text:", slicedText);
+
+      let reversedText = "";
+      for (let i = slicedText.length - 1; i >= 0; i--) {
+        reversedText += slicedText[i];
+      }
+      console.log("Reversed sliced text:", reversedText);
+
+      alert(reversedText);
+    </script>
+  </body>
+</html>

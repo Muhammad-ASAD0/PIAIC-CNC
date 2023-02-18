@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var totalMarks = 500;
+      var obtainedMarks = 0;
+
+      var course1 = prompt("Please enter marks for course 1:");
+      obtainedMarks += parseFloat(course1);
+
+      var course2 = prompt("Please enter marks for course 2:");
+      obtainedMarks += parseFloat(course2);
+
+      var course3 = prompt("Please enter marks for course 3:");
+      obtainedMarks += parseFloat(course3);
+
+      var course4 = prompt("Please enter marks for course 4:");
+      obtainedMarks += parseFloat(course4);
+
+      var course5 = prompt("Please enter marks for course 5:");
+      obtainedMarks += parseFloat(course5);
+
+      var percentage = (obtainedMarks * 100) / totalMarks;
+
+      alert("Total Percentage: " + percentage.toFixed(2) + "%");
+    </script>
+  </body>
+</html>

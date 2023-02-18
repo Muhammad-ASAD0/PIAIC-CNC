@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var courses = [];
+
+      // get course names from user
+      for (var i = 1; i <= 5; i++) {
+        var courseName = prompt("Enter course " + i + " name:");
+        courses.push(courseName);
+      }
+
+      // display course names
+      alert("Courses: " + courses.join(", "));
+
+      // allow user to edit course names
+      for (var i = 0; i < courses.length; i++) {
+        var courseName = prompt(
+          "Edit course " + (i + 1) + " name:",
+          courses[i]
+        );
+        if (courseName !== null) {
+          courses.splice(i, 1, courseName);
+        }
+      }
+
+      // display updated course names
+      alert("Updated courses: " + courses.join(", "));
+    </script>
+  </body>
+</html>

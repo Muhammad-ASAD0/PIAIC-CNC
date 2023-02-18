@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Get the course marks from the user
+      var course1 = parseInt(prompt("Enter marks for course 1:"));
+      var course2 = parseInt(prompt("Enter marks for course 2:"));
+      var course3 = parseInt(prompt("Enter marks for course 3:"));
+      var course4 = parseInt(prompt("Enter marks for course 4:"));
+      var course5 = parseInt(prompt("Enter marks for course 5:"));
+
+      var obtainedMarks = course1 + course2 + course3 + course4 + course5;
+      var totalMarks = 500;
+      var percentage = (obtainedMarks * 100) / totalMarks;
+
+      var grade;
+
+      // Calculate the grade based on the percentage
+      switch (true) {
+        case percentage >= 90:
+          grade = "A+";
+          break;
+        case percentage >= 75:
+          grade = "A";
+          break;
+        case percentage >= 60:
+          grade = "B";
+          break;
+        case percentage >= 45:
+          grade = "C";
+          break;
+        case percentage >= 30:
+          grade = "D";
+          break;
+        default:
+          grade = "F";
+      }
+
+      // Display the output in an alert
+      var output = "Obtained Marks: " + obtainedMarks + "\n";
+      output += "Total Marks: " + totalMarks + "\n";
+      output += "Percentage: " + percentage.toFixed(2) + "%\n";
+      output += "Grade: " + grade;
+
+      alert(output);
+    </script>
+  </body>
+</html>

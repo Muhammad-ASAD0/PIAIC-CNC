@@ -2,9 +2,6 @@
 
 # dependencies
 /node_modules
-#/React Assignment/my-counter-appnpx/node_modules
-/React Assignment/my-react-app/node_modules
-/React Assignment/todo-app/node_modules
 /.pnp
 .pnp.js
 
